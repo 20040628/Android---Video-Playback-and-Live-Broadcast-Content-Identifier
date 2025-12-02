@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="Theme.Training_camp_network" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#667EEA</item>
+        <item name="colorPrimaryDark">#5A67D8</item>
+        <item name="colorAccent">#667EEA</item>
+    </style>
+</resources>
