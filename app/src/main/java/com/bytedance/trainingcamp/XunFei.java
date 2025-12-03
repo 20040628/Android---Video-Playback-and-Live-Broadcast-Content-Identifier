@@ -15,6 +15,8 @@ import java.security.MessageDigest;
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
 
+// 定义回调接口：用于将脏话数量传递给VideoFragment
+
 public class XunFei {
     private static final String APP_ID = "7fee0d4b";
     private static final String SECRET_KEY = "b32c4692b7c325539a0daf6f551bad6d";
@@ -244,6 +246,9 @@ public class XunFei {
                             String transcriptionText = finalText.toString().trim();
                             Log.d("XunFeiQuery", "WAV对应最终文本：" + transcriptionText);
 
+                            // 调用脏话检测工具
+                            int swearwordCount = SwearwordChecker.checkSwearwordCount(transcriptionText);
+                            Log.d("XunFeiQuery", "脏话出现总次数：" + swearwordCount);
                             // （可选）如果需要在UI显示，切换到主线程
                             // ((Activity) context).runOnUiThread(() -> {
                             //     // 例如：textView.setText(transcriptionText);
